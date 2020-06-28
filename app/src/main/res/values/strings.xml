@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">CarppApp</string>
+    <string name="hello_gloria">Hello Gloria</string>
+    <string name="this_is_an_all_road_car">This is an all Road Car</string>
+    <string name="for_super_cars">For Super Cars</string>
+    <string name="full_time_4_4_hillux">Full time 4*4 Hillux</string>
+    <string name="sports_range">Sports range</string>
+    <string name="porsche_car_luxury_life">Porsche car. Luxury life</string>
+    <string name="saloon_car">Saloon Car</string>
+    <string name="toyota_prado">Toyota Prado</string>
+    <string name="fortuner_car">Fortuner Car</string>
+    <string name="allion_car">Allion Car</string>
+    <string name="toyota_voxy">Toyota Voxy</string>
 </resources>
