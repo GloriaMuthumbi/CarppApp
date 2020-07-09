@@ -11,4 +11,72 @@
     <string name="fortuner_car">Fortuner Car</string>
     <string name="allion_car">Allion Car</string>
     <string name="toyota_voxy">Toyota Voxy</string>
+    <string name="tab_label_1">Popular</string>
+    <string name="tab_label_2">Luxury</string>
+    <string name="tab_label_3">Sports</string>
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="best_vehicles">Best Vehicles</string>
+    <string name="browse_for_vehicles">Browse for vehicles</string>
+    <string name="short_description_of_the_car">Short Description of the car</string>
+    <string name="fast_acceleration_time">Fast Acceleration time</string>
+    <string name="vehicle_short_description">Vehicle short description</string>
+    <string name="vehicle_title">Vehicle Title</string>
+    <string name="acceleration_time_is_60_100km_hr">Acceleration time is 60 to 100km/hr</string>
+    <string name="vehicle_description">Vehicle Description</string>
+    <string name="you_want_speed">You want speed?</string>
+    <string name="cars">cars</string>
+
+
+    <array name="vehicle_image">
+        <item>@drawable/car</item>
+        <item>@drawable/car2</item>
+        <item>@drawable/car3</item>
+        <item>@drawable/car4</item>
+        <item>@drawable/car5</item>
+        <item>@drawable/car6</item>
+        <item>@drawable/car7</item>
+        <item>@drawable/car8</item>
+        <!--  <item>@drawable/car9</item>
+        <item>@drawable/car10</item>
+        <item>@drawable/car11</item>
+        <item>@drawable/car12</item>
+        <item>@drawable/car13</item>
+        <item>@drawable/car14</item-->
+    </array>
+    <string-array name="vehicle_title">
+        <item>Car</item>
+        <item>Car1</item>
+        <item>Car2</item>
+        <item>Car3</item>
+        <item>Car4</item>
+        <item>Car5</item>
+        <item>Car6</item>
+        <item>Car7</item>
+        <item>Car8</item>
+        <!-- <item>Car9</item>
+        <item>Car10</item>
+        <item>Car11</item>
+        <item>Car12</item>
+        <item>Car13</item-->
+    </string-array>
+
+    <string-array name="vehicle_description">
+        <item>Just a car</item>
+        <item>Best car</item>
+        <item>Better speed</item>
+        <item>Good off road</item>
+        <item>We got the speed</item>
+        <item>Automatic 4*4 </item>
+        <item>For comfort</item>
+        <item>For martial arts car</item>
+        <item>Only the best</item>
+        <!--  <item>Wanna taste the roads</item>
+        <item>We conquer the bush</item>
+        <item>For best interior</item>
+        <item>For couples</item>
+        <item>Best for weddings</item-->
+
+    </string-array>
 </resources>

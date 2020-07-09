@@ -3,20 +3,27 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+    <!--
+        <style name="CustomCardViewStyle" parent="@style/Widget.MaterialComponents.CardView">
+            <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay_card_custom_corners</item>
+        </style>
 
-    <style name="CustomCardViewStyle" parent="@style/Widget.MaterialComponents.CardView">
-        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay_card_custom_corners</item>
-    </style>
-
-    <style name="ShapeAppearanceOverlay_card_custom_corners" parent="">
-        <item name="cornerFamily">rounded</item>
-        <item name="cornerSizeTopLeft">20dp</item>
-        <item name="cornerSizeTopRight">20dp</item>
-        <item name="cornerSizeBottomLeft">0dp</item>
-        <item name="cornerSizeBottomRight">0dp</item>
+        <style name="ShapeAppearanceOverlay_card_custom_corners" parent="">
+            <item name="cornerFamily">rounded</item>
+            <item name="cornerSizeTopLeft">20dp</item>
+            <item name="cornerSizeTopRight">20dp</item>
+            <item name="cornerSizeBottomLeft">0dp</item>
+            <item name="cornerSizeBottomRight">0dp</item>
+        </style>-->
+    <style name="app_title">
+        <item name="android:fontFamily">@font/billion</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">17sp</item>
     </style>
 </resources>
