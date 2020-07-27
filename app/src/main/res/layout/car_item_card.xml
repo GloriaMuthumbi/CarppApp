@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/carCard"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="4dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <ImageView
+                android:id="@+id/carImg"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/infoHolder"
+                android:layout_toRightOf="@+id/carImg"
+                >
+
+            <TextView
+                android:id="@+id/carName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Red BMW"
+                android:textSize="20sp"
+                android:fontFamily="@font/quicksand"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+               />
+            <TextView
+                android:id="@+id/carPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12000 ksh/hr"
+                android:textSize="20sp"
+                android:fontFamily="@font/quicksand"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/carName"
+                />
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>
