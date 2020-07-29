@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigation.setOnNavigationItemSelectedListener(navigationItemSelectedListener);
         openFragment(explore.newInstance("",""));
 
-
     }
 
     public void openFragment(Fragment fragment){
