@@ -8,8 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/belowLayout"
-        android:background="#101955"
-        >
+        android:background="#101955">
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -147,11 +146,12 @@
                         android:textSize="25sp" />
 
                     <ImageButton
+                        android:id="@+id/login_button"
                         android:layout_width="64dp"
                         android:layout_height="64dp"
                         android:layout_gravity="bottom"
                         android:layout_marginLeft="15dp"
-
+                        android:onClick="login"
                         android:background="@drawable/login_signup_button_style"
                         android:src="@drawable/ic_right" />
                 </LinearLayout>

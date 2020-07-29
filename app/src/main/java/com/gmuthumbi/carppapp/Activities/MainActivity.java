@@ -1,4 +1,4 @@
-package com.gmuthumbi.carppapp;
+package com.gmuthumbi.carppapp.Activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +12,7 @@ import com.gmuthumbi.carppapp.Fragments.account;
 import com.gmuthumbi.carppapp.Fragments.explore;
 import com.gmuthumbi.carppapp.Fragments.notifications;
 import com.gmuthumbi.carppapp.Fragments.search;
+import com.gmuthumbi.carppapp.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
