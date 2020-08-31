@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -17,7 +19,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigation;
-
+    private SharedPreferences mPreferences;
+    private String sharedPrefFile = "com.gmuthumbi.carppapp.Activities.loginActivity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +28,15 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigation = findViewById(R.id.bottom_navigation);
         bottomNavigation.setOnNavigationItemSelectedListener(navigationItemSelectedListener);
         openFragment(explore.newInstance("",""));
+        mPreferences = getSharedPreferences(sharedPrefFile,MODE_PRIVATE);
+
+        String name = mPreferences.getString("userName","");
+
+        //checking if the user is logged in using shared preferences
+        if (name.isEmpty()){
+            Intent intent = new Intent(MainActivity.this,loginActivity.class);
+            startActivity(intent);
+        }
 
     }
 

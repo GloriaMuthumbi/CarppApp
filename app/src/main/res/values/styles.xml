@@ -19,4 +19,8 @@
         <item name="cornerSizeBottomLeft">0dp</item>
         <item name="cornerSizeBottomRight">0dp</item>
     </style>
+    <style name="searchviewFont" parent="">
+        <item name="fontFamily">@font/quicksand</item>
+    </style>
+
 </resources>
