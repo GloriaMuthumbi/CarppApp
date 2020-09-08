@@ -2,6 +2,7 @@ package com.gmuthumbi.carppapp.Networking;
 
 import android.util.Log;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -30,8 +31,6 @@ api_credentials = new API_Credentials();
         HashMap<String, String> params = new HashMap<String, String>();
         params.put("email", email);
         params.put("password", password);
-
-
         return new JsonObjectRequest(
                 Request.Method.POST,
                 api_credentials.getAPIurl()+"users/login",
@@ -63,5 +62,6 @@ api_credentials = new API_Credentials();
         };
 
     }
+
 
 }

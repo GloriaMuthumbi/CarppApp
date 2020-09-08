@@ -76,6 +76,13 @@ public class loginActivity extends AppCompatActivity {
                     Intent explore = new Intent(loginActivity.this, MainActivity.class);
                     startActivity(explore);
                 }
+
+                @Override
+                public void onSuccess(JSONObject jsonObject, String rate) throws JSONException {
+
+                }
+
+
             };
 
             UserRequests userRequests = new UserRequests();
