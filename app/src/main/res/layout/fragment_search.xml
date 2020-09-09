@@ -31,7 +31,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/carAdventure"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_explorecar"
@@ -74,8 +74,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:translationX="20dp"
             android:src="@drawable/ic_ellipse_6"
+            android:translationX="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -86,8 +86,8 @@
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginTop="80dp"
-            android:translationZ="-1dp"
             android:src="@drawable/ic_pink_ellipse"
+            android:translationZ="-1dp"
             app:layout_constraintBottom_toTopOf="@id/searchView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.598"
@@ -98,14 +98,25 @@
             android:id="@+id/imageView5"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:layout_marginTop="20dp"
             android:layout_marginStart="110dp"
             android:layout_marginLeft="110dp"
+            android:layout_marginTop="20dp"
             android:src="@drawable/ic_ellipse_7_138dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/imageView2"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/searchResults"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.506"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/searchView" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

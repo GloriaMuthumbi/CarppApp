@@ -61,4 +61,47 @@ public class CarRequests {
         };
 
     }
+
+    public StringRequest carSearch(final VolleyCallbacks volleyCallbacks , final String token, final String apUrl){
+
+        api_credentials = new API_Credentials();
+
+        return new StringRequest(
+                Request.Method.GET,
+                api_credentials.getAPIurl()+"car"+apUrl,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+
+
+                        try {
+                            JSONObject result = new JSONObject(response);
+                            volleyCallbacks.onSuccess(result);
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+                    }
+                },
+                new Response.ErrorListener() {
+
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.d("Volley3", "Error: "
+                                + error.getMessage());
+                    }
+                }) {
+
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                Map<String, String> params = new HashMap<String, String>();
+
+                params.put("Authorization", "Bearer "+token);
+                return params;
+            }
+        };
+
+    }
+
 }

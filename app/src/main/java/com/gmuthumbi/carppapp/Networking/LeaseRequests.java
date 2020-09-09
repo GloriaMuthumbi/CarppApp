@@ -1,5 +1,6 @@
 package com.gmuthumbi.carppapp.Networking;
 
+import android.net.Uri;
 import android.util.Log;
 
 import com.android.volley.AuthFailureError;
@@ -36,6 +37,47 @@ public class LeaseRequests {
                         try {
                             JSONObject result = new JSONObject(response);
                             volleyCallbacks.onSuccess(result);
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+                    }
+                },
+                new Response.ErrorListener() {
+
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.d("Volley3", "Error: "
+                                + error.getMessage());
+                    }
+                }) {
+
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                Map<String, String> params = new HashMap<String, String>();
+
+                params.put("Authorization", "Bearer "+token);
+                return params;
+            }
+        };
+
+    }
+    public StringRequest leaseSearchDetails(final VolleyCallbacks volleyCallbacks , final String token, final String apUrl,final String Name, final String plate, final Uri carImg){
+
+        api_credentials = new API_Credentials();
+
+        return new StringRequest(
+                Request.Method.GET,
+                api_credentials.getAPIurl()+"lease"+apUrl,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+
+
+                        try {
+                            JSONObject result = new JSONObject(response);
+                            volleyCallbacks.onSuccess(result,Name,plate,carImg);
 
                         } catch (JSONException e) {
                             e.printStackTrace();

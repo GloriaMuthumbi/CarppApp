@@ -144,6 +144,11 @@ public class explore extends Fragment {
                 initcarRecyclerview();
             }
 
+            @Override
+            public void onSuccess(JSONObject jsonObject,String name, String price, Uri carImg) throws JSONException {
+
+            }
+
         };
 
 
@@ -171,6 +176,11 @@ public class explore extends Fragment {
 
             @Override
             public void onSuccess(JSONObject jsonObject, String rate) throws JSONException {
+
+            }
+
+            @Override
+            public void onSuccess(JSONObject jsonObject,String name, String price, Uri carImg) throws JSONException {
 
             }
 
