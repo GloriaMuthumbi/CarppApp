@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -53,98 +53,73 @@
             android:textStyle="bold"
             />
 
-
-        <TableLayout
-            android:id="@+id/bid_table"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="20dp"
-            android:layout_below="@id/bid_title"
-            android:layout_marginBottom="25dp">
-
-            <TableRow
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/amount_text"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center_horizontal"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bid_title"
+                app:startIconDrawable="@drawable/ic_money"
+                app:startIconTint="@color/white"
+                >
 
-                <TextView
-                    android:gravity="end"
-                    android:text="Amount: "
-                    android:fontFamily="@font/quicksand"
-                    android:textColor="@color/white"
-                    android:textSize="25sp"
-                    android:textStyle="bold"/>
-
-                <EditText
-                    android:id="@+id/bid_amount"
-                    android:hint="Enter bidding amount"
-                    android:inputType="number"
-                    android:fontFamily="@font/quicksand"
-                    android:textColor="@color/white"
-                    android:textSize="25sp"
-                    android:textColorHint="@android:color/white" />
-
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center_horizontal"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:gravity="end"
-                    android:text="From : "
-                    android:fontFamily="@font/quicksand"
-                    android:textColor="@color/white"
-                    android:textSize="25sp"
-                    android:textStyle="bold"/>
-
-                <EditText
-                    android:id="@+id/from_destination"
-                    android:hint="Enter point of departure"
-                    android:inputType="textPassword"
-                    android:fontFamily="@font/quicksand"
-                    android:textColor="@color/white"
-                    android:textSize="25sp"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Amount"
                     android:textColorHint="@android:color/white"
+                    android:textSize="25sp"
+                    android:inputType="numberDecimal"
+                    android:textColor="@android:color/white"
                     />
 
-            </TableRow>
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <TableRow
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/from_location"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center_horizontal"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content"
+                android:layout_below="@id/amount_text"
+                app:startIconDrawable="@drawable/ic_location"
+                app:startIconTint="@color/white"
+                >
 
-                <TextView
-                    android:gravity="end"
-                    android:text="To : "
-                    android:fontFamily="@font/quicksand"
-                    android:textColor="@color/white"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Departure"
+                    android:textColorHint="@android:color/white"
                     android:textSize="25sp"
-                    android:textStyle="bold"/>
-
-                <EditText
-                    android:id="@+id/to_location"
-                    android:hint="Enter destination"
                     android:inputType="text"
-                    android:fontFamily="@font/quicksand"
-                    android:textColor="@color/white"
-                    android:textSize="25sp"
-                    android:textColorHint="@android:color/white"
+                    android:textColor="@android:color/white"
                     />
 
-            </TableRow>
-        </TableLayout>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/to_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/from_location"
+                app:startIconDrawable="@drawable/ic_location"
+                app:startIconTint="@color/white"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Destination"
+                    android:textColorHint="@color/white"
+                    android:textSize="25sp"
+                    android:inputType="text"
+                    android:textColor="@android:color/white"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
 
             <LinearLayout
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:orientation="horizontal"
-                android:layout_below="@id/bid_table"
+                android:layout_below="@id/to_location"
                 android:layout_centerHorizontal="true"
                 >
                 <Button
