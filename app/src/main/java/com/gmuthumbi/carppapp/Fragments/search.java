@@ -116,13 +116,14 @@ public class search extends Fragment {
             }
 
             @Override
-            public void onSuccess(JSONObject jsonObject, String name, String plate, Uri carImg) throws JSONException {
+            public void onSuccess(JSONObject jsonObject, String name, String plate, Uri carImg,String carId,String userId,String mileage, String rating, String description) throws JSONException {
+                carList.clear();
                 JSONArray carsArr = new JSONArray(jsonObject.getString("lease"));
                 String rate = carsArr.getJSONObject(0).get("rate").toString();
 
                 //Log.d("volley4",plate);
 
-                Car car = new Car(carImg,name,rate+"/hr",plate);
+                Car car = new Car(carImg,name,rate+"/hr",plate, carId,userId,mileage,rating,description);
                 carList.add(car);
                 initcarRecyclerview();
             }
@@ -139,7 +140,10 @@ public class search extends Fragment {
                     String name = carsArr2.getJSONObject(i).get("carName").toString();
                     String id = carsArr2.getJSONObject(i).get("id").toString();
                     String plate = carsArr2.getJSONObject(i).get("noPlate").toString();
-
+                    String userId = carsArr2.getJSONObject(i).get("userId").toString();
+                    String description = carsArr2.getJSONObject(i).get("description").toString();
+                    String mileage = carsArr2.getJSONObject(i).get("mileage").toString();
+                    String rating = carsArr2.getJSONObject(i).get("rating").toString();
                     Uri uri = Uri.parse(carsArr2.getJSONObject(i).getJSONObject("request").get("url").toString());
 
                     String[] segments = uri.getPath().split("/");
@@ -149,7 +153,7 @@ public class search extends Fragment {
 
                     LeaseRequests leaseRequests = new LeaseRequests();
 
-                    StringRequest stringRequest = leaseRequests.leaseSearchDetails(volleyCallbacks1,token,"/"+id,name,plate,imguri);
+                    StringRequest stringRequest = leaseRequests.leaseSearchDetails(volleyCallbacks1,token,"/"+id,name,plate,imguri,id,userId,mileage,rating,description);
                     queue.add(stringRequest);
 
                 }
@@ -161,7 +165,7 @@ public class search extends Fragment {
             }
 
             @Override
-            public void onSuccess(JSONObject jsonObject, String name, String price, Uri carImg) throws JSONException {
+            public void onSuccess(JSONObject jsonObject, String name, String price, Uri carImg,String carId,String userId,String mileage, String rating, String description) throws JSONException {
 
             }
         };

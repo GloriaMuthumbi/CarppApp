@@ -32,10 +32,10 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="80dp"
-                android:id="@+id/nameHolder"
+                android:id="@+id/carNameHolder"
                 >
                 <ImageView
-                    android:id="@+id/nameImg"
+                    android:id="@+id/carNameImg"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_dog_tag"
@@ -53,7 +53,7 @@
                     android:layout_marginTop="6dp"
                     android:layout_marginLeft="12dp"
                     android:layout_centerHorizontal="true"
-                    android:layout_below="@+id/nameImg"
+                    android:layout_below="@+id/carNameImg"
                     />
             </RelativeLayout>
             <RelativeLayout

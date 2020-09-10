@@ -63,7 +63,7 @@ public class LeaseRequests {
         };
 
     }
-    public StringRequest leaseSearchDetails(final VolleyCallbacks volleyCallbacks , final String token, final String apUrl,final String Name, final String plate, final Uri carImg){
+    public StringRequest leaseSearchDetails(final VolleyCallbacks volleyCallbacks , final String token, final String apUrl,final String Name, final String plate, final Uri carImg,final String carId,final String userId,final String mileage, final String rating, final String description){
 
         api_credentials = new API_Credentials();
 
@@ -77,7 +77,7 @@ public class LeaseRequests {
 
                         try {
                             JSONObject result = new JSONObject(response);
-                            volleyCallbacks.onSuccess(result,Name,plate,carImg);
+                            volleyCallbacks.onSuccess(result,Name,plate,carImg,carId,userId,mileage,rating,description);
 
                         } catch (JSONException e) {
                             e.printStackTrace();

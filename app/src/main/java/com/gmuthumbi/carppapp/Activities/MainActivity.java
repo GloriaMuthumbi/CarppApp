@@ -7,15 +7,21 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.gmuthumbi.carppapp.Fragments.account;
 import com.gmuthumbi.carppapp.Fragments.explore;
 import com.gmuthumbi.carppapp.Fragments.notifications;
 import com.gmuthumbi.carppapp.Fragments.search;
 import com.gmuthumbi.carppapp.R;
+import com.gmuthumbi.carppapp.utils.VolleyCallbacks;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigation;
@@ -71,4 +77,25 @@ public class MainActivity extends AppCompatActivity {
                 }
             };
 
+    public void EditDetails(View view) {
+        VolleyCallbacks volleyCallbacks = new VolleyCallbacks() {
+            @Override
+            public void onSuccess(JSONObject jsonObject) throws JSONException {
+
+            }
+
+            @Override
+            public void onSuccess(JSONObject jsonObject, String rate) throws JSONException {
+
+            }
+
+            @Override
+            public void onSuccess(JSONObject jsonObject, String name, String plate, Uri carImg, String carId,String userId,String mileage, String rating, String description) throws JSONException {
+
+            }
+
+        };
+
+
+    }
 }

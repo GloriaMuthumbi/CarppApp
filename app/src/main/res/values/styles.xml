@@ -23,4 +23,10 @@
         <item name="fontFamily">@font/quicksand</item>
     </style>
 
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">#fc5c9c</item>
+        <item name="colorControlActivated">#fc5c9c</item>
+
+    </style>
+
 </resources>

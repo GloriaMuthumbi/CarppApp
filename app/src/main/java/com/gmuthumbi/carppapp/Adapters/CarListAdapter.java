@@ -19,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 public class CarListAdapter extends RecyclerView.Adapter<CarListAdapter.CarViewHolder> {
 
     private List<Car> CarList;
+    private View.OnClickListener mOnItemClickListener;
 
     public CarListAdapter(List<Car>carlist){
     CarList = carlist;
@@ -54,6 +55,11 @@ public class CarListAdapter extends RecyclerView.Adapter<CarListAdapter.CarViewH
         return CarList.size();
     }
 
+
+    public void setOnItemClickListener(View.OnClickListener itemClickListener) {
+        mOnItemClickListener = itemClickListener;
+    }
+
     public class CarViewHolder extends  RecyclerView.ViewHolder{
         private ImageView carImg;
         private TextView carName,carPrice,carPlate;
@@ -65,6 +71,9 @@ public class CarListAdapter extends RecyclerView.Adapter<CarListAdapter.CarViewH
             carName = itemView.findViewById(R.id.carName);
             carPrice = itemView.findViewById(R.id.carPrice);
             carPlate = itemView.findViewById(R.id.carPlate);
+
+            itemView.setTag(this);
+            itemView.setOnClickListener(mOnItemClickListener);
         }
 
 

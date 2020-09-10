@@ -68,7 +68,6 @@ public class loginActivity extends AppCompatActivity {
 
                     preferencesEditor.putString("JWT",jsonObject.get("token").toString());
                     preferencesEditor.putString("userName",jsonObject.get("userName").toString());
-
                     preferencesEditor.apply();
 
                    // String tk = mPreferences.getString("JWT","");
@@ -84,7 +83,7 @@ public class loginActivity extends AppCompatActivity {
                 }
 
                 @Override
-                public void onSuccess(JSONObject jsonObject, String name, String price, Uri carImg) throws JSONException {
+                public void onSuccess(JSONObject jsonObject, String name, String plate, Uri carImg, String carId,String userId,String mileage, String rating, String description) throws JSONException {
 
                 }
 
