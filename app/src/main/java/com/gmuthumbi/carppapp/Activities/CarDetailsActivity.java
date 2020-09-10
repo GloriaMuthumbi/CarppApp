@@ -1,12 +1,16 @@
 package com.gmuthumbi.carppapp.Activities;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.graphics.PorterDuff;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.LayerDrawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -30,6 +34,7 @@ public class CarDetailsActivity extends Activity {
     TextView description,username,carName,price;
     ImageView carImage,userImage;
     private SharedPreferences mPreferences;
+    Dialog myDialog;
     private String sharedPrefFile = "com.gmuthumbi.carppapp.Activities.loginActivity";
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,5 +93,20 @@ public class CarDetailsActivity extends Activity {
     };
 
 
+    public void RentCar(View view) {
+        myDialog = new Dialog(this);
+        //startActivity(new Intent(CarDetailsActivity.this, Pop.class));
 
+        myDialog.setContentView(R.layout.custom_popup);
+
+        myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        myDialog.show();
+    }
+
+    public void callOwner(View view) {
+
+        Uri myuri = Uri.parse("tel:0715769694");
+        Intent myintent = new Intent(Intent.ACTION_DIAL,myuri);
+        startActivity(myintent);
+    }
 }

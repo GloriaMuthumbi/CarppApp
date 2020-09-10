@@ -50,7 +50,7 @@ public class explore extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
     CarouselView carouselView;
-    int[] sampleImages = {R.drawable.car,R.drawable.car2,R.drawable.car3};
+    int[] sampleImages = {R.drawable.lexus,R.drawable.ford,R.drawable.honda};
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;

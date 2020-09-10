@@ -7,6 +7,8 @@
     tools:context=".Fragments.account">
 <androidx.core.widget.NestedScrollView
     android:layout_width="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:fillViewport="true"
     android:layout_height="match_parent">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -21,6 +23,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:civ_border_color="#fc5c9c"
+            app:civ_border_width="2dp"
             tools:src="@tools:sample/avatars" />
 
         <TextView
@@ -143,7 +147,6 @@
             android:text="Edit"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:onClick="EditDetails"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout"/>
         <View
             android:id="@+id/view"
@@ -181,30 +184,52 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/userCarsTitle" />
 
-
-       <!-- <TextView
-            android:id="@+id/rentedCarsTitle"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/logout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/quicksand"
-            android:layout_marginTop="15dp"
-            android:text="Rented Cars"
-            android:textFontWeight="700"
-            android:textSize="15sp"
+            android:layout_marginTop="40dp"
+            android:text="Logout"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/add"
+            app:layout_constraintTop_toBottomOf="@+id/userCarsList" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="30dp"
+            android:text="Add"
+            app:layout_constraintEnd_toStartOf="@+id/logout"
+            app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/userCarsList" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rentedCarsList"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:nestedScrollingEnabled="true"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rentedCarsTitle" />-->
+
+        <!-- <TextView
+             android:id="@+id/rentedCarsTitle"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:fontFamily="@font/quicksand"
+             android:layout_marginTop="15dp"
+             android:text="Rented Cars"
+             android:textFontWeight="700"
+             android:textSize="15sp"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/userCarsList" />
+
+         <androidx.recyclerview.widget.RecyclerView
+             android:id="@+id/rentedCarsList"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="10dp"
+             android:nestedScrollingEnabled="true"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintHorizontal_bias="1.0"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/rentedCarsTitle" />-->
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>
 </FrameLayout>
