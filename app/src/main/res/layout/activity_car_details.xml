@@ -29,55 +29,58 @@
         android:fontFamily="@font/quicksand"
         android:layout_below="@id/car_image"
         />
+
     <LinearLayout
         android:id="@+id/owner_info"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_below="@id/car_name"
+        android:layout_marginTop="2dp"
         android:background="@drawable/shadow"
-        >
+        android:orientation="horizontal">
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingLeft="8dp"
-            >
+            android:paddingLeft="8dp">
+
             <TextView
                 android:id="@+id/owner_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="owners name"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="@color/colorPrimary"
+                android:fontFamily="@font/quicksand"
                 android:paddingTop="8dp"
                 android:paddingBottom="5dp"
-                android:fontFamily="@font/quicksand"
-                />
+                android:text="owners name"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/owner_contact"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0700000000"
-                android:textStyle="bold"
-                android:textSize="16sp"
-                android:paddingBottom="5dp"
                 android:fontFamily="@font/quicksand"
-                />
+                android:paddingBottom="5dp"
+                android:text="0700000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
         </LinearLayout>
+
         <View
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_weight="1" />
+
         <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="65dp"
             android:layout_height="65dp"
             android:src="@drawable/default_dp"
             app:civ_border_color="@android:color/black"
-            app:civ_border_width="2dp"
-            />
+            app:civ_border_width="2dp" />
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/description_layout"
         android:layout_width="match_parent"
@@ -155,14 +158,19 @@
             />
 
         </LinearLayout>
-    <ImageButton
+    <Button
         android:id="@+id/make_call"
         android:layout_width="180dp"
         android:layout_height="45dp"
         android:textStyle="bold"
+        android:layout_gravity="center"
+        android:drawableLeft="@drawable/ic_baseline_call_24"
         android:gravity="center"
-        android:src="@drawable/ic_baseline_call_24"
+        android:text="Call"
         android:textColor="@android:color/white"
+        android:singleLine="true"
+        android:paddingRight="30dp"
+        android:paddingLeft="50dp"
         android:background="@drawable/rounded_corner_call"
         android:layout_below="@id/price"
          />
