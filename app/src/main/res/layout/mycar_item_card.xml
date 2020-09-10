@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/carCard"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="4dp">
+        <RelativeLayout
+            android:id="@+id/carimage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <ImageView
+                android:id="@+id/Img"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:scaleType="centerCrop"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal"
+                android:layout_below="@+id/Img"
+
+                >
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="80dp"
+                    android:id="@+id/carNameHolder"
+                    >
+                    <ImageView
+                        android:id="@+id/carNameImg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_dog_tag"
+                        android:layout_marginTop="10dp"
+                        android:layout_centerHorizontal="true"
+                        />
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Red BMW"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/quicksand"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/carNameImg"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="80dp"
+                    android:id="@+id/plateHolder"
+                    >
+                    <ImageView
+                        android:id="@+id/noplateImg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_noplate"
+                        android:layout_marginTop="10dp"
+                        android:layout_centerHorizontal="true"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/plate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="KBD 980N"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/quicksand"
+                        android:layout_below="@+id/noplateImg"
+                        android:layout_marginTop="10dp"
+                        android:layout_centerHorizontal="true"
+                        />
+                </RelativeLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>
