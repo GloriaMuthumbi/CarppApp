@@ -65,9 +65,9 @@ public class MainActivity extends AppCompatActivity {
                         case R.id.search_page:
                             openFragment(search.newInstance("",""));
                             return true;
-                        case R.id.notification_page:
+                        /*case R.id.notification_page:
                             openFragment(notifications.newInstance("",""));
-                            return true;
+                            return true;*/
                         case R.id.account_page:
                             openFragment(account.newInstance("",""));
                             return true;

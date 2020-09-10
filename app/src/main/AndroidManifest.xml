@@ -12,8 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Activities.CarDetailsActivity"></activity>
-        <activity android:name=".Activities.loginActivity"></activity>
+
+        <activity android:name=".Activities.CarDetailsActivity" />
+        <activity android:name=".Activities.loginActivity" />
         <activity android:name=".Activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

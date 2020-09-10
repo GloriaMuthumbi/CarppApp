@@ -1,5 +1,6 @@
 package com.gmuthumbi.carppapp.Fragments;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
@@ -21,6 +22,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.auth0.android.jwt.Claim;
 import com.auth0.android.jwt.JWT;
+import com.gmuthumbi.carppapp.Activities.loginActivity;
 import com.gmuthumbi.carppapp.Adapters.CarListAdapter;
 import com.gmuthumbi.carppapp.Adapters.myCarAdapter;
 import com.gmuthumbi.carppapp.Modals.API_Credentials;
@@ -29,6 +31,7 @@ import com.gmuthumbi.carppapp.Modals.myCar;
 import com.gmuthumbi.carppapp.Networking.CarRequests;
 import com.gmuthumbi.carppapp.R;
 import com.gmuthumbi.carppapp.utils.VolleyCallbacks;
+import com.google.android.material.button.MaterialButton;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
@@ -60,6 +63,7 @@ public class account extends Fragment {
     private myCarAdapter mcarListAdapter;
     private List<myCar> carList;
     private View view;
+    private MaterialButton editProf,logout,add;
     public account() {
         // Required empty public constructor
     }
@@ -100,6 +104,30 @@ public class account extends Fragment {
         carList = new ArrayList<>();
         final String token = mPreferences.getString("JWT","");
         String name = mPreferences.getString("userName","");
+        editProf = view.findViewById(R.id.editProf);
+        logout = view.findViewById(R.id.logout);
+        add = view.findViewById(R.id.add);
+
+        editProf.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), loginActivity.class));
+            }
+        });
+
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
 
         TextView username = view.findViewById(R.id.userName);
 
